@@ -1,3 +1,4 @@
 public class OuterClass {	
       system.debug('This is for testing of creation of branch');
+        system.debug('This is for testing of creation of branch No 1');
 }
