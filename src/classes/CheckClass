@@ -1,2 +1,3 @@
-public class OuterClass{
+public class OuterClass {	
+      system.debug('This is for testing of creation of branch');
 }
