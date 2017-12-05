@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>New Employee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>New Employees</value>
+    </caseValues>
+    <fields>
+        <label><!-- Employee History --></label>
+        <name>Employee_History__c</name>
+        <relationshipLabel><!-- New Employees --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Employee Id --></label>
+        <name>Employee_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Technical --></label>
+        <name>Non_Technical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Skills --></label>
+        <name>Skills__c</name>
+        <picklistValues>
+            <masterLabel>Non Technical</masterLabel>
+            <translation><!-- Non Technical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical</masterLabel>
+            <translation><!-- Technical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Technical --></label>
+        <name>Technical__c</name>
+    </fields>
+    <layouts>
+        <layout>Non Technical</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Technical</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Non Technical --></label>
+        <name>Non_Technical</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Technical --></label>
+        <name>Technical</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

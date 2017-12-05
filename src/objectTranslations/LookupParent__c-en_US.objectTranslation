@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>LookupParent</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>LookupParents</value>
+    </caseValues>
+    <fields>
+        <label><!-- LookupParentAdd --></label>
+        <name>LookupParentAdd__c</name>
+    </fields>
+    <fields>
+        <label><!-- LookupParentContact --></label>
+        <name>LookupParentContact__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

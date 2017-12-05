@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <tab>standard-Chatter</tab>
+    <tab>standard-Campaign</tab>
+    <tab>standard-Lead</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-Contact</tab>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Forecasting3</tab>
+    <tab>standard-Contract</tab>
+    <tab>standard-Order</tab>
+    <tab>standard-Case</tab>
+    <tab>standard-Solution</tab>
+    <tab>standard-Product2</tab>
+    <tab>standard-report</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>Merchandise__c</tab>
+    <tab>test__c</tab>
+    <tab>Line_Item__c</tab>
+    <tab>Childtest__c</tab>
+    <tab>New_Parent__c</tab>
+    <tab>LookupChild__c</tab>
+    <tab>LookupParent__c</tab>
+    <tab>Company__c</tab>
+    <tab>Bill__c</tab>
+    <tab>Media_Name__c</tab>
+    <tab>Department__c</tab>
+    <tab>Employee__c</tab>
+    <tab>Client__c</tab>
+    <tab>Project_Detail__c</tab>
+    <tab>Salary_Details__c</tab>
+    <tab>Employee2__c</tab>
+    <tab>Role__c</tab>
+</CustomApplication>
