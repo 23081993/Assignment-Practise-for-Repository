@@ -9,17 +9,8 @@
         <value>Roles</value>
     </caseValues>
     <fields>
-        <label><!-- Description --></label>
-        <name>Description__c</name>
-    </fields>
-    <fields>
-        <label><!-- Emp Id --></label>
-        <name>Emp_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- Employee Name --></label>
-        <name>Employee_Name__c</name>
-        <relationshipLabel><!-- Roles --></relationshipLabel>
+        <label><!-- RollID --></label>
+        <name>RollID__c</name>
     </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

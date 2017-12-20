@@ -57,7 +57,7 @@
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>Follow_Up_Date__c  = today()</formula>
+        <formula>Follow_Up_Date__c   &lt;  today()</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

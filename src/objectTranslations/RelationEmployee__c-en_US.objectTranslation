@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RelationEmployee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RelationEmployees</value>
+    </caseValues>
+    <fields>
+        <label><!-- Employee ID --></label>
+        <name>Employee_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Role --></label>
+        <name>Employee_Role__c</name>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation><!-- Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Manager</masterLabel>
+            <translation><!-- Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Architecture</masterLabel>
+            <translation><!-- Solution Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr. Developer</masterLabel>
+            <translation><!-- Sr. Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Lead</masterLabel>
+            <translation><!-- Technical Lead --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

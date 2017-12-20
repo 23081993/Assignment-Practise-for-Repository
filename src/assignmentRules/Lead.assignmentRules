@@ -2,7 +2,7 @@
 <AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignmentRule>
         <fullName>Assignment of  Pune sales team</fullName>
-        <active>true</active>
+        <active>false</active>
         <ruleEntry>
             <assignedTo>Pune_Sales</assignedTo>
             <assignedToType>Queue</assignedToType>
@@ -15,7 +15,7 @@
     </assignmentRule>
     <assignmentRule>
         <fullName>Assignment of Mumbai Sales Team</fullName>
-        <active>false</active>
+        <active>true</active>
         <ruleEntry>
             <assignedTo>Mumbai_sales</assignedTo>
             <assignedToType>Queue</assignedToType>
@@ -23,6 +23,15 @@
                 <field>Lead.City</field>
                 <operation>equals</operation>
                 <value>Mumbai</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Pune_Sales</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.City</field>
+                <operation>equals</operation>
+                <value>pune</value>
             </criteriaItems>
         </ruleEntry>
     </assignmentRule>

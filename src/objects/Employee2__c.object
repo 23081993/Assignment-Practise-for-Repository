@@ -55,48 +55,50 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
-        <fullName>Contact_No__c</fullName>
-        <description>Contact no of employee</description>
+        <fullName>Name__c</fullName>
+        <description>Contains the name of the employee.</description>
         <externalId>false</externalId>
-        <label>Contact No</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Phone</type>
-    </fields>
-    <fields>
-        <fullName>Department__c</fullName>
-        <description>Defines Department of employee</description>
-        <externalId>false</externalId>
-        <label>Department</label>
-        <length>30</length>
+        <label>Name</label>
+        <length>40</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Employee_Role__c</fullName>
-        <description>Describes the status of employee</description>
+        <fullName>Role__c</fullName>
+        <description>COntains the role of an employee in an organisation.</description>
         <externalId>false</externalId>
-        <label>Employee Role</label>
-        <length>35</length>
-        <required>false</required>
+        <label>Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sr. Developer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution Architect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ID__c</fullName>
-        <description>This contains the information of employee id</description>
-        <externalId>false</externalId>
-        <label>ID</label>
-        <precision>10</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>true</unique>
+        <type>Picklist</type>
     </fields>
     <label>Employee2</label>
     <listViews>
@@ -105,8 +107,9 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Employee2 Name</label>
-        <type>Text</type>
+        <displayFormat>EMP-{00000}</displayFormat>
+        <label>Employee ID</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Employees2</pluralLabel>
     <searchLayouts/>

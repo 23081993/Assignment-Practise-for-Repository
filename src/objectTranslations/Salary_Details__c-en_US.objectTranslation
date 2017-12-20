@@ -21,8 +21,8 @@
         <name>Basic__c</name>
     </fields>
     <fields>
-        <label><!-- Employee --></label>
-        <name>Employee_Name__c</name>
+        <label><!-- Credited To --></label>
+        <name>Credited_To__c</name>
         <relationshipLabel><!-- Salary Details --></relationshipLabel>
     </fields>
     <fields>
@@ -102,7 +102,7 @@
         <name>Account_no_cannot_be_changed</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- Bank details cannot be null --></errorMessage>
+        <errorMessage><!-- Bank detail field is blank.Please enter bank details. --></errorMessage>
         <name>Bank_detail_cannot_be_null</name>
     </validationRules>
 </CustomObjectTranslation>

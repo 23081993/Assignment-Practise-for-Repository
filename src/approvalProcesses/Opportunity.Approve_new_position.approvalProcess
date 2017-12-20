@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>true</active>
-    <allowRecall>false</allowRecall>
+    <active>false</active>
+    <allowRecall>true</allowRecall>
     <allowedSubmitters>
         <type>creator</type>
     </allowedSubmitters>
@@ -10,10 +10,6 @@
     </allowedSubmitters>
     <allowedSubmitters>
         <submitter>rathore.sunil@eternussolutions.com</submitter>
-        <type>user</type>
-    </allowedSubmitters>
-    <allowedSubmitters>
-        <submitter>rathoresun.23@gmail.com</submitter>
         <type>user</type>
     </allowedSubmitters>
     <approvalPageFields>
@@ -25,7 +21,7 @@
         <field>Probability</field>
     </approvalPageFields>
     <approvalStep>
-        <allowDelegate>true</allowDelegate>
+        <allowDelegate>false</allowDelegate>
         <approvalActions>
             <action>
                 <name>Apporval_routed</name>
@@ -49,7 +45,7 @@
         <label>Manager</label>
         <name>Manager</name>
     </approvalStep>
-    <description>If opportunity &gt; 5000,the approval should be routed to manager</description>
+    <description>If opportunity amount  &gt; 5000,the approval should be routed to manager</description>
     <emailTemplate>unfiled$public/SupportCaseAssignmentNotification</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
@@ -59,8 +55,38 @@
             <value>&quot;USD 5,000&quot;</value>
         </criteriaItems>
     </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Apporval_routed</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Approval_Opportunity</name>
+            <type>Task</type>
+        </action>
+    </finalApprovalActions>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Apporval_routed</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Approval_Opportunity</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>Approve_Request</name>
+            <type>Task</type>
+        </action>
+    </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Approve_Request</name>
+            <type>Task</type>
+        </action>
+    </initialSubmissionActions>
     <label>Approve new position</label>
     <nextAutomatedApprover>
         <useApproverFieldOfRecordOwner>true</useApproverFieldOfRecordOwner>

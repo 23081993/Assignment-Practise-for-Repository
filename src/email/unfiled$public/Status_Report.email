@@ -1,1 +1,8 @@
-This is to inform you that the employee {!Employee__c.Employee_Id__c} is inactive .
+Hello{!Employee__c.Manager__c}
+
+  Your record of Employee ID {!Employee__c.Name} Name {!Employee__c.First_Name__c} Is been deactivated.
+.
+
+
+Regards
+{!Employee__c.CreatedBy}

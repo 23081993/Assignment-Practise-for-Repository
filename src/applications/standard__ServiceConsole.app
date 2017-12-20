@@ -188,10 +188,31 @@
     <tab>Project_Detail__c</tab>
     <tab>Salary_Details__c</tab>
     <tab>Employee2__c</tab>
+    <tab>Contact__c</tab>
+    <tab>TestObject1__c</tab>
+    <tab>TestObject2__c</tab>
+    <tab>TestObject3__c</tab>
+    <tab>TestObject4__c</tab>
     <tab>Role__c</tab>
+    <tab>Employee_3__c</tab>
+    <tab>EmployeeProjectJunction__c</tab>
+    <tab>A__c</tab>
+    <tab>B__c</tab>
+    <tab>C__c</tab>
+    <tab>SalesHeader__c</tab>
+    <tab>EFT_Transaction_Status__c</tab>
     <workspaceMappings>
         <mapping>
+            <tab>A__c</tab>
+        </mapping>
+        <mapping>
+            <tab>B__c</tab>
+        </mapping>
+        <mapping>
             <tab>Bill__c</tab>
+        </mapping>
+        <mapping>
+            <tab>C__c</tab>
         </mapping>
         <mapping>
             <tab>Childtest__c</tab>
@@ -203,10 +224,22 @@
             <tab>Company__c</tab>
         </mapping>
         <mapping>
+            <tab>Contact__c</tab>
+        </mapping>
+        <mapping>
             <tab>Department__c</tab>
         </mapping>
         <mapping>
+            <tab>EFT_Transaction_Status__c</tab>
+        </mapping>
+        <mapping>
             <tab>Employee2__c</tab>
+        </mapping>
+        <mapping>
+            <tab>EmployeeProjectJunction__c</tab>
+        </mapping>
+        <mapping>
+            <tab>Employee_3__c</tab>
         </mapping>
         <mapping>
             <tab>Employee__c</tab>
@@ -237,6 +270,21 @@
         </mapping>
         <mapping>
             <tab>Salary_Details__c</tab>
+        </mapping>
+        <mapping>
+            <tab>SalesHeader__c</tab>
+        </mapping>
+        <mapping>
+            <tab>TestObject1__c</tab>
+        </mapping>
+        <mapping>
+            <tab>TestObject2__c</tab>
+        </mapping>
+        <mapping>
+            <tab>TestObject3__c</tab>
+        </mapping>
+        <mapping>
+            <tab>TestObject4__c</tab>
         </mapping>
         <mapping>
             <tab>standard-Account</tab>

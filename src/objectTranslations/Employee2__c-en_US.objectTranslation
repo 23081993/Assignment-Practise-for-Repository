@@ -9,20 +9,32 @@
         <value>Employees2</value>
     </caseValues>
     <fields>
-        <label><!-- Contact No --></label>
-        <name>Contact_No__c</name>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
     </fields>
     <fields>
-        <label><!-- Department --></label>
-        <name>Department__c</name>
-    </fields>
-    <fields>
-        <label><!-- Employee Role --></label>
-        <name>Employee_Role__c</name>
-    </fields>
-    <fields>
-        <label><!-- ID --></label>
-        <name>ID__c</name>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation><!-- Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Manager</masterLabel>
+            <translation><!-- Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Architect</masterLabel>
+            <translation><!-- Solution Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr. Developer</masterLabel>
+            <translation><!-- Sr. Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Lead</masterLabel>
+            <translation><!-- Technical Lead --></translation>
+        </picklistValues>
     </fields>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

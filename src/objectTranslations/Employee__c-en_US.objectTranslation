@@ -57,8 +57,8 @@
         <name>Current_EMployee__c</name>
     </fields>
     <fields>
-        <label><!-- DOB --></label>
-        <name>DOB__c</name>
+        <label><!-- Date Of Birth --></label>
+        <name>Date_Of_Birth__c</name>
     </fields>
     <fields>
         <label><!-- Date of Joining --></label>
@@ -98,12 +98,13 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- Employee Id --></label>
-        <name>Employee_Id__c</name>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
     </fields>
     <fields>
-        <label><!-- Employee_Role --></label>
+        <label><!-- Role --></label>
         <name>Employee_Role__c</name>
+        <relationshipLabel><!-- Employees --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- First Name --></label>
@@ -118,7 +119,7 @@
         <name>Is_Active__c</name>
     </fields>
     <fields>
-        <label><!-- Is On Notice period --></label>
+        <label><!-- Is On Notice Period --></label>
         <name>Is_On_Notice_Period__c</name>
     </fields>
     <fields>
@@ -126,8 +127,8 @@
         <name>Last_Name__c</name>
     </fields>
     <fields>
-        <label><!-- Last Working Date --></label>
-        <name>Last_Working_Date__c</name>
+        <label><!-- Last Working Day --></label>
+        <name>Last_Working_Day__c</name>
     </fields>
     <fields>
         <label><!-- Manager Mail --></label>
@@ -136,16 +137,11 @@
     <fields>
         <label><!-- Manager --></label>
         <name>Manager__c</name>
-        <relationshipLabel><!-- Employees (Employee) --></relationshipLabel>
+        <relationshipLabel><!-- Employees --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Resignation Date --></label>
         <name>Resignation_Date__c</name>
-    </fields>
-    <fields>
-        <label><!-- EmployeeRole --></label>
-        <name>Role__c</name>
-        <relationshipLabel><!-- Employees --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- SSN --></label>
@@ -236,8 +232,12 @@
         <name>Street__c</name>
     </fields>
     <fields>
-        <label><!-- ZIP --></label>
-        <name>ZIP__c</name>
+        <label><!-- Unique Field --></label>
+        <name>Unique_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
     </fields>
     <layouts>
         <layout>Employee Layout</layout>
@@ -272,8 +272,24 @@
     <layouts>
         <layout>Employee_page</layout>
         <sections>
+            <label><!-- Address Details --></label>
+            <section>Address Details</section>
+        </sections>
+        <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Department Details --></label>
+            <section>Department Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee Details --></label>
+            <section>Employee Details</section>
+        </sections>
+        <sections>
+            <label><!-- Salary Details --></label>
+            <section>Salary Details</section>
         </sections>
     </layouts>
     <layouts>
@@ -297,12 +313,16 @@
     </recordTypes>
     <startsWith>Consonant</startsWith>
     <validationRules>
-        <errorMessage><!-- Please Enter Valid DOB --></errorMessage>
+        <errorMessage><!-- Please enter a valid date of birth.Employee cannot be less than 18 years of age. --></errorMessage>
         <name>Enter_Valid_DOB</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Joining Date cannot be greater than Last Working Date --></errorMessage>
         <name>Last_Working_Date_Should_Be_Smaller</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Employee is on notice period.Please enter resignation Date. --></errorMessage>
+        <name>Resignation_Date_Validation_Rule</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Only 10 numbers can be input in SSN field --></errorMessage>

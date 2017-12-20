@@ -1,2 +1,5 @@
-Hi,
-This is here notifying that the folloew up date is todays date
+Hi {!Lead.OwnerFullName},
+This is here notifying that the follow up date of lead {!Lead.Id}  elapsed.Please follow the lead
+
+Regards
+{!Lead.CreatedBy}

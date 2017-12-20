@@ -269,5 +269,9 @@
         <members>*</members>
         <name>Settings</name>
     </types>
+     <types>
+        <members>*</members>
+        <name>Sunil Rathore</name>
+    </types>
     <version>36.0</version>
 </Package>

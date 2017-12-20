@@ -9,16 +9,12 @@
         <value>Clients</value>
     </caseValues>
     <fields>
-        <label><!-- Client Id --></label>
-        <name>Client_Id__c</name>
-    </fields>
-    <fields>
         <label><!-- Description --></label>
         <name>Description__c</name>
     </fields>
     <fields>
-        <label><!-- Email --></label>
-        <name>Email__c</name>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
     </fields>
     <fields>
         <label><!-- Mobile No --></label>

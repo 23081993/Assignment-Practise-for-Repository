@@ -55,6 +55,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>Address__c</fullName>
         <externalId>false</externalId>
@@ -68,7 +69,7 @@
     <fields>
         <fullName>Age__c</fullName>
         <externalId>false</externalId>
-        <formula>FLOOR((Today() - DOB__c)/365)</formula>
+        <formula>FLOOR((Today() - Date_Of_Birth__c)/365)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Age</label>
         <precision>18</precision>
@@ -147,9 +148,10 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>DOB__c</fullName>
+        <fullName>Date_Of_Birth__c</fullName>
+        <description>Contains date of birth of an employee.</description>
         <externalId>false</externalId>
-        <label>DOB</label>
+        <label>Date Of Birth</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
@@ -211,22 +213,26 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Employee_Id__c</fullName>
-        <displayFormat>EMP-{000000}</displayFormat>
+        <fullName>Email__c</fullName>
         <externalId>false</externalId>
-        <label>Employee Id</label>
+        <label>Email</label>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>AutoNumber</type>
+        <type>Email</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Employee_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Contains the role of employee</description>
         <externalId>false</externalId>
-        <label>Employee_Role</label>
-        <length>40</length>
+        <label>Role</label>
+        <referenceTo>Role__c</referenceTo>
+        <relationshipLabel>Employees</relationshipLabel>
+        <relationshipName>Employees</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>First_Name__c</fullName>
@@ -260,8 +266,9 @@
     <fields>
         <fullName>Is_On_Notice_Period__c</fullName>
         <defaultValue>true</defaultValue>
+        <description>Check whether the employee is on notice period or not.</description>
         <externalId>false</externalId>
-        <label>Is On Notice period</label>
+        <label>Is On Notice Period</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
@@ -276,16 +283,16 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Last_Working_Date__c</fullName>
+        <fullName>Last_Working_Day__c</fullName>
         <externalId>false</externalId>
-        <label>Last Working Date</label>
+        <label>Last Working Day</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
     <fields>
         <fullName>Manager_Mail__c</fullName>
-        <externalId>true</externalId>
+        <externalId>false</externalId>
         <label>Manager Mail</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -300,16 +307,15 @@
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>$Source.Role__c</field>
+                <field>Employee__c.Employee_Role__r.Name</field>
                 <operation>equals</operation>
                 <value>Project Manager</value>
             </filterItems>
-            <infoMessage>Employee Role As Project Manager will Show in manager field</infoMessage>
             <isOptional>false</isOptional>
         </lookupFilter>
         <referenceTo>Employee__c</referenceTo>
-        <relationshipLabel>Employees (Employee)</relationshipLabel>
-        <relationshipName>Employees1</relationshipName>
+        <relationshipLabel>Employees</relationshipLabel>
+        <relationshipName>Employees</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -321,18 +327,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Role__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>EmployeeRole</label>
-        <referenceTo>Employee__c</referenceTo>
-        <relationshipLabel>Employees</relationshipLabel>
-        <relationshipName>Employees</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>SSN__c</fullName>
@@ -351,7 +345,7 @@
         <externalId>false</externalId>
         <label>Salary Credited Till Date</label>
         <summarizedField>Salary_Details__c.Gross_Salary__c</summarizedField>
-        <summaryForeignKey>Salary_Details__c.Employee_Name__c</summaryForeignKey>
+        <summaryForeignKey>Salary_Details__c.Credited_To__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
@@ -466,9 +460,22 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>ZIP__c</fullName>
+        <fullName>Unique_Field__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Contains the copy of role of employee</description>
         <externalId>false</externalId>
-        <label>ZIP</label>
+        <label>Unique Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <description>Contains the pin code  of an employee.</description>
+        <externalId>false</externalId>
+        <label>Zip</label>
         <length>6</length>
         <required>true</required>
         <trackTrending>false</trackTrending>
@@ -479,6 +486,7 @@
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
+        <columns>Current_EMployee__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
         <sharedTo>
@@ -489,16 +497,34 @@
         <fullName>All_Active_Employees</fullName>
         <columns>First_Name__c</columns>
         <columns>Last_Name__c</columns>
+        <columns>Date_of_Joining__c</columns>
+        <columns>Last_Working_Day__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_On_Notice_Period__c</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
         <label>All Active Employees</label>
+        <sharedTo>
+            <role>HR_Manager</role>
+        </sharedTo>
     </listViews>
     <listViews>
-        <fullName>All_Inactive_Employee_Employee</fullName>
-        <filterScope>Queue</filterScope>
-        <label>All Inactive Employee</label>
-        <queue>All_Inactive_Employee</queue>
+        <fullName>All_Inactive_employee</fullName>
+        <columns>NAME</columns>
+        <columns>Full_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Active__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Inactive employee</label>
         <sharedTo>
-            <allInternalUsers></allInternalUsers>
+            <role>HR_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
@@ -510,18 +536,10 @@
             <allInternalUsers></allInternalUsers>
         </sharedTo>
     </listViews>
-    <listViews>
-        <fullName>Employee_on_Notice_Employee</fullName>
-        <filterScope>Queue</filterScope>
-        <label>Employee on Notice</label>
-        <queue>Employee_on_Notice</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
-    </listViews>
     <nameField>
-        <label>Employee Name</label>
-        <type>Text</type>
+        <displayFormat>EMP-{000000}</displayFormat>
+        <label>Employee ID</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Employees</pluralLabel>
     <recordTypes>
@@ -828,7 +846,7 @@
             <picklist>Skillset__c</picklist>
             <values>
                 <fullName>%2ENet</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>Apex</fullName>
@@ -885,14 +903,22 @@
         <fullName>Enter_Valid_DOB</fullName>
         <active>true</active>
         <errorConditionFormula>Age__c  &lt; 18</errorConditionFormula>
-        <errorDisplayField>DOB__c</errorDisplayField>
-        <errorMessage>Please Enter Valid DOB</errorMessage>
+        <errorDisplayField>Date_Of_Birth__c</errorDisplayField>
+        <errorMessage>Please enter a valid date of birth.Employee cannot be less than 18 years of age.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>Last_Working_Date_Should_Be_Smaller</fullName>
         <active>true</active>
-        <errorConditionFormula>Date_of_Joining__c  &gt;  Last_Working_Date__c</errorConditionFormula>
+        <errorConditionFormula>Date_of_Joining__c  &gt;  Last_Working_Day__c</errorConditionFormula>
         <errorMessage>Joining Date cannot be greater than Last Working Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Resignation_Date_Validation_Rule</fullName>
+        <active>true</active>
+        <description>If the employee is on notice period enter the resignation date.</description>
+        <errorConditionFormula>if(ISNULL(Resignation_Date__c) , if(Is_On_Notice_Period__c  = true,true,false),false)</errorConditionFormula>
+        <errorDisplayField>Resignation_Date__c</errorDisplayField>
+        <errorMessage>Employee is on notice period.Please enter resignation Date.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>SSN_Size_Validation</fullName>
@@ -904,7 +930,7 @@
     <validationRules>
         <fullName>Salary_cannot_be_Process_for_Inactive</fullName>
         <active>true</active>
-        <errorConditionFormula>Is_Active__c  = False</errorConditionFormula>
+        <errorConditionFormula>Is_Active__c  = False  &amp;&amp; IF( ISNULL(Annual_CTC__c)  ,FALSE,TRUE)</errorConditionFormula>
         <errorMessage>Salary Cannot be process for Inactive Employee</errorMessage>
     </validationRules>
     <validationRules>

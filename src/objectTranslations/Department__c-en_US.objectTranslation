@@ -9,12 +9,12 @@
         <value>Departments</value>
     </caseValues>
     <fields>
-        <label><!-- Description --></label>
-        <name>Description__c</name>
+        <label><!-- Department Name --></label>
+        <name>Department_Name__c</name>
     </fields>
     <fields>
-        <label><!-- S.No --></label>
-        <name>S_No__c</name>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
     </fields>
     <layouts>
         <layout>Department Layout</layout>

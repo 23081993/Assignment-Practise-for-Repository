@@ -47,7 +47,6 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Contains the onformation of employee roles in an oranisation</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -56,42 +55,14 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
-        <fullName>Description__c</fullName>
-        <description>contains complete description</description>
+        <fullName>RollID__c</fullName>
+        <displayFormat>RID-{0000}</displayFormat>
         <externalId>false</externalId>
-        <label>Description</label>
-        <length>255</length>
-        <required>false</required>
+        <label>RollID</label>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Emp_Id__c</fullName>
-        <description>Contains employee id</description>
-        <externalId>false</externalId>
-        <label>Emp Id</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>true</unique>
-    </fields>
-    <fields>
-        <fullName>Employee_Name__c</fullName>
-        <description>Contains employee name</description>
-        <externalId>false</externalId>
-        <label>Employee Name</label>
-        <referenceTo>Employee2__c</referenceTo>
-        <relationshipLabel>Roles</relationshipLabel>
-        <relationshipName>Roles</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>AutoNumber</type>
     </fields>
     <label>Role</label>
     <listViews>
@@ -100,10 +71,10 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Role Name</label>
+        <label>Role</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Roles</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

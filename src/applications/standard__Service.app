@@ -24,5 +24,17 @@
     <tab>Project_Detail__c</tab>
     <tab>Salary_Details__c</tab>
     <tab>Employee2__c</tab>
+    <tab>Contact__c</tab>
+    <tab>TestObject1__c</tab>
+    <tab>TestObject2__c</tab>
+    <tab>TestObject3__c</tab>
+    <tab>TestObject4__c</tab>
     <tab>Role__c</tab>
+    <tab>Employee_3__c</tab>
+    <tab>EmployeeProjectJunction__c</tab>
+    <tab>A__c</tab>
+    <tab>B__c</tab>
+    <tab>C__c</tab>
+    <tab>SalesHeader__c</tab>
+    <tab>EFT_Transaction_Status__c</tab>
 </CustomApplication>

@@ -1,2 +1,6 @@
-Hey,
-There is a deal which is on negotiating and viewed state and this is a big opportunity.Put efforts to create it account
+Hey {!Opportunity.OwnerFirstName} ,
+There is a deal Opportunity ID {!Opportunity.Id} which is on negotiating and viewed state and this is a big opportunity.Put efforts to create it account
+
+
+Regards
+{!Opportunity.CreatedBy}

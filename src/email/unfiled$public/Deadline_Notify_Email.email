@@ -1,1 +1,6 @@
-This is to inform you that the end date of project is after 5 days.
+Hello {!Project_Detail__c.Manager_Name__c}
+
+ It is been a reminder for you that the last day of the project ID {!Project_Detail__c.Name} is after 5 day. Please evaluate the  status of your project.
+
+Regards
+{!Project_Detail__c.CreatedBy}

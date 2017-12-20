@@ -55,14 +55,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <fields>
-        <fullName>Client_Id__c</fullName>
-        <displayFormat>CL-{0000}</displayFormat>
-        <externalId>false</externalId>
-        <label>Client Id</label>
-        <trackTrending>false</trackTrending>
-        <type>AutoNumber</type>
-    </fields>
+    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
@@ -73,9 +66,10 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
-        <fullName>Email__c</fullName>
+        <fullName>Email_Address__c</fullName>
+        <description>Contains the email address of client.</description>
         <externalId>false</externalId>
-        <label>Email</label>
+        <label>Email Address</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Email</type>
@@ -106,8 +100,9 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Client Name</label>
-        <type>Text</type>
+        <displayFormat>CL-{0000}</displayFormat>
+        <label>Client Code</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Clients</pluralLabel>
     <searchLayouts/>

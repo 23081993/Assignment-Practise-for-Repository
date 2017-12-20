@@ -14,8 +14,14 @@
         <relationshipLabel><!-- Project Details --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Description --></label>
-        <name>Description__c</name>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <relationshipLabel><!-- Project Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Employee Name --></label>
+        <name>Employee_Name__c</name>
+        <relationshipLabel><!-- Project Details (Employee Name) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- End Date --></label>
@@ -46,14 +52,13 @@
         <name>Manager_Mail__c</name>
     </fields>
     <fields>
-        <label><!-- Managerof project --></label>
+        <label><!-- Manager --></label>
         <name>Manager_Name__c</name>
         <relationshipLabel><!-- Project Details --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Manager --></label>
-        <name>Manager__c</name>
-        <relationshipLabel><!-- Project Details --></relationshipLabel>
+        <label><!-- Project Description --></label>
+        <name>Project_Description__c</name>
     </fields>
     <fields>
         <label><!-- Project Manager --></label>
@@ -64,8 +69,8 @@
         <name>Project_code__c</name>
     </fields>
     <fields>
-        <label><!-- Satrt Date --></label>
-        <name>Satrt_Date__c</name>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
     </fields>
     <fields>
         <label><!-- Status --></label>
@@ -83,6 +88,29 @@
             <translation><!-- Open --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Department Details layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Department Details --></label>
+            <section>Department Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employee On Project Detail --></label>
+            <section>Employee On Project Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Other Details --></label>
+            <section>Other Details</section>
+        </sections>
+        <sections>
+            <label><!-- Project Duration --></label>
+            <section>Project Duration</section>
+        </sections>
+    </layouts>
     <layouts>
         <layout>Project Detail Layout</layout>
         <sections>
@@ -122,4 +150,8 @@
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>CalenderTask</name>
+        <subject><!-- CalenderTask --></subject>
+    </workflowTasks>
 </CustomObjectTranslation>

@@ -47,7 +47,7 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
@@ -55,6 +55,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
         <fullName>Client_Name__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -68,18 +69,34 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Description__c</fullName>
+        <fullName>Department__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Description</label>
+        <label>Department</label>
+        <referenceTo>Department__c</referenceTo>
+        <relationshipLabel>Project Details</relationshipLabel>
+        <relationshipName>Project_Details</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>TextArea</type>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Employee Name</label>
+        <referenceTo>Employee__c</referenceTo>
+        <relationshipLabel>Project Details (Employee Name)</relationshipLabel>
+        <relationshipName>Project_Details1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>End_Date__c</fullName>
         <externalId>false</externalId>
         <label>End Date</label>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -90,7 +107,7 @@
         <picklist>
             <picklistValues>
                 <fullName>Product Development</fullName>
-                <default>true</default>
+                <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Support</fullName>
@@ -104,7 +121,6 @@
                 <fullName>Enterprise services</fullName>
                 <default>false</default>
             </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
@@ -124,17 +140,7 @@
         <fullName>Manager_Name__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Managerof project</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>Employee__c.Role__r.Employee_Role__c</field>
-                <operation>equals</operation>
-                <value>Project Manager</value>
-            </filterItems>
-            <infoMessage>Employee with project manager will only lookup in the manager pop up</infoMessage>
-            <isOptional>false</isOptional>
-        </lookupFilter>
+        <label>Manager</label>
         <referenceTo>Employee__c</referenceTo>
         <relationshipLabel>Project Details</relationshipLabel>
         <relationshipName>Project_Details</relationshipName>
@@ -143,25 +149,13 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Manager__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>Project_Description__c</fullName>
+        <description>Description of the project.</description>
         <externalId>false</externalId>
-        <label>Manager</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>Employee2__c.Employee_Role__c</field>
-                <operation>equals</operation>
-                <value>Project Manager</value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
-        <referenceTo>Employee2__c</referenceTo>
-        <relationshipLabel>Project Details</relationshipLabel>
-        <relationshipName>Project_Details</relationshipName>
+        <label>Project Description</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Project_Manager__c</fullName>
@@ -182,10 +176,10 @@
         <type>AutoNumber</type>
     </fields>
     <fields>
-        <fullName>Satrt_Date__c</fullName>
+        <fullName>Start_Date__c</fullName>
         <externalId>false</externalId>
-        <label>Satrt Date</label>
-        <required>false</required>
+        <label>Start Date</label>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Date</type>
     </fields>
@@ -220,8 +214,9 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Project Detail Name</label>
-        <type>Text</type>
+        <displayFormat>PRJ-{0000}</displayFormat>
+        <label>Project Code</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Project Details</pluralLabel>
     <searchLayouts/>

@@ -55,6 +55,18 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Department_Name__c</fullName>
+        <description>Contains the name of the department.</description>
+        <externalId>false</externalId>
+        <label>Department Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
@@ -62,14 +74,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>S_No__c</fullName>
-        <displayFormat>DEP-{00000}</displayFormat>
-        <externalId>false</externalId>
-        <label>S.No</label>
-        <trackTrending>false</trackTrending>
-        <type>AutoNumber</type>
     </fields>
     <label>Department</label>
     <listViews>
@@ -87,8 +91,9 @@
         </sharedTo>
     </listViews>
     <nameField>
-        <label>Department Name</label>
-        <type>Text</type>
+        <displayFormat>DEP-{000000}</displayFormat>
+        <label>Department ID</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Departments</pluralLabel>
     <searchLayouts/>
