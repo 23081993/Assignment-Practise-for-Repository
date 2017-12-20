@@ -125,7 +125,7 @@ public class ProgrammingModel1Set2 extends PM1S3VirtualClass {
                                      where name LIKE 'a%' ];
         for(account newAcc:accountName ){
             system.debug(newAcc);
-            system.debug('sunil');
+          
         }
         
     } 
