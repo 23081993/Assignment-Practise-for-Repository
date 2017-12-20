@@ -136,14 +136,6 @@
     </types>
     <types>
         <members>*</members>
-        <name>CustomSite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>DataCategoryGroup</name>
     </types>
     <types>
@@ -204,6 +196,10 @@
     <types>
         <members>*</members>
         <name>Letterhead</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>MyTab</name>
     </types>
     <types>
         <members>*</members>
@@ -268,10 +264,6 @@
     <types>
         <members>*</members>
         <name>Settings</name>
-    </types>
-     <types>
-        <members>*</members>
-        <name>Sunil Rathore</name>
     </types>
     <version>36.0</version>
 </Package>
